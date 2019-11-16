@@ -99,3 +99,52 @@ db.movies.find({"synopsis": {$regex: /gold|dragon/gi}});
     // Delete Documents 
 db.movies.remove({"title":"Pee Wee Herman's Big Adventure"});
 db.movies.remove({"title": "Avatar"});
+
+    // Insert 
+db.users.insert({
+    "username": "SallySmith",
+    "first_name": "Sally",
+    "last_name": "Smith"
+});
+
+db.users.insert({
+    "username" : "JimmyHagen",
+    "first": "Jimmy",
+    "last": "Hagen"
+});
+
+db.posts.insert({
+    "username": "SallySmith",
+    "title": "Passes out at party",
+    "body": "Wakes up early and cleans house"
+});
+
+db.posts.insert({
+    "username": "SallySmith",
+    "title": "Buys a House",
+    "body": "Living in a new neighborhood now"
+});
+
+db.posts.insert({
+    "username": "SallySmith",
+    "title": "Reports a bug in your code",
+    "body": "Sends you a Pull Request"
+});
+
+db.posts.insert({
+    "username": "JimmyHagen",
+    "title": "Borrows something",
+    "body": "Returns it when he is done"
+});
+
+db.posts.insert({
+    "username": "JimmyHagen",
+    "title": " Borrows everything",
+    "body": "The end"
+});
+
+db.posts.insert({
+    "username": "JimmyHagen",
+    "title": "Forks your repo on github",
+    "body": " Sets to private"
+});
