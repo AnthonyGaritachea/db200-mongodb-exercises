@@ -1,4 +1,4 @@
-// insert 
+    // insert 
 db.movies.insert({
     "title": "Star Wars",
     "writer": "George Lucas",
@@ -75,3 +75,11 @@ db.movies.insert({
 db.movies.insert({
     "title" : "Avatar"
 });
+
+    // Query/Find Documents 
+db.movies.find({});
+db.movies.find({"writer": "Quentin Tarantino"}).count();
+db.movies.find({"actors": "Brad Pitt"});
+db.movies.find({"franchise": "The Hobbit"});
+db.movies.find({"year":{$gt: 1989, $lt: 2000}}); 
+db.movies.find({$or: [{"year": {$lt: 2000}}, {"year": {$gt: 2010}}]});
