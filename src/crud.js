@@ -78,7 +78,7 @@ db.movies.insert({
 
     // Query/Find Documents 
 db.movies.find({});
-db.movies.find({"writer": "Quentin Tarantino"}).count();
+db.movies.find({"writer": "Quentin Tarantino"});
 db.movies.find({"actors": "Brad Pitt"});
 db.movies.find({"franchise": "The Hobbit"});
 db.movies.find({"year":{$gt: 1989, $lt: 2000}}); 
@@ -92,6 +92,10 @@ db.movies.update({"title": "Pulp Fiction"}, {$push: {"actors": "Samuel L. Jackso
     // Text Search 
 db.movies.find({"synopsis": /Bilbo/gi});
 db.movies.find({"synopsis": /Gandalf/gi});
-db.movies.find({"synopsis": {$regex:/Bilbo/gi, $not:/Gandalf/gi}}).pretty(); 
+db.movies.find({"synopsis": {$regex:/Bilbo/gi, $not:/Gandalf/gi}}); 
 db.movies.find({"synopsis": {$regex: /dwarves|hobbit/gi}});
 db.movies.find({"synopsis": {$regex: /gold|dragon/gi}});
+
+    // Delete Documents 
+db.movies.remove({"title":"Pee Wee Herman's Big Adventure"});
+db.movies.remove({"title": "Avatar"});
