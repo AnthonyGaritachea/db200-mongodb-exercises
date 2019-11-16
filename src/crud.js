@@ -37,7 +37,7 @@ db.movies.insert({
     "title": "Inglorious Basterds",
     "writer": "Quentin Tarantino",
     "year": 2009,
-    actors : [
+    "actors" : [
         "Brad Pitt",
         "Diane Kruger",
         "Eli Roth"
@@ -83,3 +83,8 @@ db.movies.find({"actors": "Brad Pitt"});
 db.movies.find({"franchise": "The Hobbit"});
 db.movies.find({"year":{$gt: 1989, $lt: 2000}}); 
 db.movies.find({$or: [{"year": {$lt: 2000}}, {"year": {$gt: 2010}}]});
+
+//  Update Documets 
+db.movies.update({"title": "The Hobbit: An Unexpected Journey"}, {$set: {"synopsis": "A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."}});
+db.movies.update({"title": "The Hobbit: The Desolation of Smaug"}, {$set: {"synopsis": "The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring."}});
+db.movies.update({"title": "Pulp Fiction"}, {$push: {"actors": "Samuel L. Jackson"}});
