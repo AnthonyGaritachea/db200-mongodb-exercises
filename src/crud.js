@@ -170,8 +170,8 @@ db.comments.insert({
 
 db.comments.insert({
     "username" : "JimmyHagen",
-"comment" : "It still isn't clean",
-"post" : [ObjectId("5dd0822a0dbbbdb22abcbbc1")]
+    "comment": "It still isn't clean",
+    "post": [ObjectId("5dd0822a0dbbbdb22abcbbc1")]
 });
 
 db.comments.insert({
@@ -180,3 +180,12 @@ db.comments.insert({
     "post": [ObjectId("5dd083610dbbbdb22abcbbc3")]
 });
 
+    // Querying Related Collections
+db.users.find({});
+db.posts.find({});
+db.posts.find({"username": "SallySmith"});
+db.posts.find({"username": "JimmyHagen"});
+db.comments.find({});
+db.comments.find({"username": "SallySmith"});
+db.comments.find({"username": "JimmyHagen"});
+db.posts.find({"title": "Reports a bug in your code"})
