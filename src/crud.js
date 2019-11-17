@@ -1,4 +1,4 @@
-    // insert 
+    // Insert 
 db.movies.insert({
     "title": "Star Wars",
     "writer": "George Lucas",
@@ -148,3 +148,35 @@ db.posts.insert({
     "title": "Forks your repo on github",
     "body": " Sets to private"
 });
+
+    // Linking Documents
+db.comments.insert({
+    "username": "SallySmith",
+    "comment": "Hope you got a good deal!",
+    "post": [ObjectId("5dd083b70dbbbdb22abcbbc5"),]
+});
+
+db.comments.insert({
+    "username": "SallySmith",
+    "comment": "Hope you got a good deal!",
+    "post": [ObjectId("5dd083b70dbbbdb22abcbbc5"),]
+});
+
+db.comments.insert({
+    "username" : "SallySmith",
+    "comment" : "Don't violate the licensing agreement!",
+    "post" : [ObjectId("5dd085800dbbbdb22abcbbc7")]
+});
+
+db.comments.insert({
+    "username" : "JimmyHagen",
+"comment" : "It still isn't clean",
+"post" : [ObjectId("5dd0822a0dbbbdb22abcbbc1")]
+});
+
+db.comments.insert({
+    "username": "JimmyHagen",
+    "comment": "Denied your PR cause I found a hack",
+    "post": [ObjectId("5dd083610dbbbdb22abcbbc3")]
+});
+
